@@ -4,3 +4,5 @@ class WelcomeController < ApplicationController
     @curso = params[:curso]
   end
 end
+
+
