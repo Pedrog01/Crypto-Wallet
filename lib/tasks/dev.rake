@@ -5,8 +5,8 @@
         show_spinner("Apagando BD...") {%x(rails db:drop)}
         show_spinner("Criando BD...") {%x(rails db:create)}
         show_spinner("Migrando BD...") {%x(rails db:migrate)}
-        %x(rails dev:add_coins)
         %x(rails dev:add_mining_types)
+        %x(rails dev:add_coins)
       else 
         puts "Você não está em ambiente de desenvolvimento"
       end
@@ -17,17 +17,26 @@
       show_spinner("Cadastrando Moedas...") do
     coins =  
         [
-            {description:"Bitcoin",
+          {
+            description:"Bitcoin",
             acronym:"BTC",
-            url_image: "https://static.vecteezy.com/system/resources/previews/008/505/801/original/bitcoin-logo-color-illustration-png.png"},
+            url_image: "https://static.vecteezy.com/system/resources/previews/008/505/801/original/bitcoin-logo-color-illustration-png.png",
+            mining_type: MiningType.find_by(acronym: "PoS")
+          },
 
-            {description:"Ethereum",
+          {
+            description:"Ethereum",
             acronym:"ETH",
-            url_image: "https://cryptologos.cc/logos/ethereum-eth-logo.png"},
+            url_image: "https://cryptologos.cc/logos/ethereum-eth-logo.png",
+            mining_type: MiningType.all.sample
+          },
 
-            {description:"Dash",
+          {
+            description:"Dash",
             acronym:"DASH",
-            url_image: "https://cryptologos.cc/logos/dash-dash-logo.png"}
+            url_image: "https://cryptologos.cc/logos/dash-dash-logo.png",
+            mining_type: MiningType.all.sample
+          }
         ]
 
         coins.each do |coin| 
