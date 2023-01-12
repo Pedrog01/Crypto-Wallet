@@ -60,10 +60,9 @@ class CoinsController < ApplicationController
   end
 
   private
-
     def set_mining_type_options
-      @set_mining_type_options = MiningType.all.pluck(:description, :id)
-
+      @mining_type_options = MiningType.all.pluck(:description, :id)
+    end
 
     # Use callbacks to share common setup or constraints between actions.
     def set_coin
