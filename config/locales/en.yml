@@ -30,7 +30,8 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  abc: "Hello world"
-
-pt-BR:
-  abc:"olá Mundo!"
+  hello: "Hello world"
+  links:
+    edit: "Edit"
+    show: "Show"
+    delete: "Delete"
