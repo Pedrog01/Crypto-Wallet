@@ -1,7 +1,8 @@
 pt-BR:
-  hello: "Olá Mundo"
-  link:
+  actual_locale: "Português Brasileiro"
+  hello: "Olá mundo"
+  links: 
     edit: "Editar"
     show: "Mostrar"
-    delete: "Apagar"
-    
+    new: "Novo"
+    destroy: "Deletar"
