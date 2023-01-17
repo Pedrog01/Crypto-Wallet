@@ -37,10 +37,19 @@ en:
     menu: "To start, choose an option below:"
     confirm: "Are you sure?"
   hello: "Hello world"
-  links: 
+  links:
     edit: "Edit"
     show: "Show"
-    new: "New"
     delete: "Delete"
     new: "New"
+    back: "Back"
+  new: 
+    coin: "New Coin"
+    mining_type: "New Mining Type"
+  editing:
+    coin: "Editing Coin"
+    mining_type: "Editing Mining Type"
+  showing:
+    coin: "Showing Coin"
+    mining_type: "Showing Mining Type"
 
